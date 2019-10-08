@@ -18,28 +18,31 @@
    attributes, performing data-joins or inserting and removing elements. D3 has two functions to make selections d3.select and
    d3.selectAll. d3.select will select the first matching element while selectAll will grab all matching elements. Select is just 
    the base and after each given element has been slected we can use others commands i'm about to talk about to specifically edit
-   and or add to each element.
+   and or add to each element. The three specific commands are as listed below:
   </p>
   
-   <h3>
+   <h4>
    Append Command
-  </h3>
+  </h4>
   
     <p>
-  Append stuff
+    Elements can be added to a selection using .append and .insert. .append appends an element to the children of each element 
+     in the selection. The first argument specifies the type of element that we want to select. .append is commonly used in the
+     context of enter/exit where it has different behaviour.
   </p>
   
-   <h3>
+   <h4>
    Text Command
-  </h3>
+  </h4>
   
     <p>
-     text stuff
+     The .text command does just as we would expect and edits a given elements text. An example of this would look like 
+     d3.select('div.title').text('My new book').
   </p>
   
-  <h3>
+  <h4>
    Style Command
-  </h3>
+  </h4>
   
     <p>
     style stuff
