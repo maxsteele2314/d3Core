@@ -28,7 +28,12 @@
     <p>
     Elements can be added to a selection using .append and .insert. .append appends an element to the children of each element 
      in the selection. The first argument specifies the type of element that we want to select. .append is commonly used in the
-     context of enter/exit where it has different behaviour.
+     context of enter/exit where it has different behaviour. Here's an example of this function:
+     d3.selectAll('g.item')
+  .append('text')
+  .text(function(d, i) {
+    return i + 1;
+  });
   </p>
   
    <h4>
@@ -37,7 +42,7 @@
   
     <p>
      The .text command does just as we would expect and edits a given elements text. An example of this would look like 
-     d3.select('div.title').text('My new book').
+     d3.select('div.title').text('My new book'). 
   </p>
   
   <h4>
@@ -45,7 +50,9 @@
   </h4>
   
     <p>
-    style stuff
+    The style command is similiar in its simplicity as it edits the style of an elemet. It somewhat acts as a CSS inside
+     the actual function. CSS can still be added but the style command allows the return functions to be edited immediately and 
+     more efficently. An example of this would be d3.selectAll('circle').style('fill', 'red').
   </p>
   
   
